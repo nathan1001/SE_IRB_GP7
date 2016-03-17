@@ -62,9 +62,23 @@ G. Specify the data sources you will use for your research (e.g. questionnaire, 
 <b>If your nature of your study is biomedical, public health, or clinical psychological research, then you cannot use this form. Please use the right form.</b>
 <p>Upload:<input type="file" name="fileToUpload" id="fileToUpload"><p>
 Identify potential risks for subjects to be involved in this project/research. What procedures will be in place to minimize any risks to subjects?
-<p><b>Does the research involve any of the following procedures?<b><p>
+<p><b>Does the research involve any of the following procedures?</b><p>
 
-  
+<div>
+  <!--In this example the checkboxes are grouped as an array-->   
+         <input type="checkbox" value="1" name="permission[]"> Deception of the participant?<p>
+<input type="checkbox" value="2" name="permission[]"> Punishment of the participant?<p>
+<input type="checkbox" value="3" name="permission[]"> Materials commonly regarded as socially unacceptable
+such as pornography, inflammatory text, ethnic portrayals?<p>   
+<input type="checkbox" value="3" name="permission[]">Any other procedure that might be considered to be an
+invasion of privacy?<p>   
+<input type="checkbox" value="3" name="permission[]">Disclosure of the name of individual participants?<p>   
+<input type="checkbox" value="3" name="permission[]">Any other physically invasive procedure?<p>   
+      </div>
+      If the answer to any of the above is "Yes,” please explain this procedure in detail and describe procedures for protecting against or minimizing any potential risk.<p>
+
+<p>Click here to enter text:<input type="text" name="username" size="100" maxlength="100"/><p>
+
   <!-- UserGroup:<select name="usergroup">
   <option value="1">Admin</option>
   <option value="2">Faculty</option>
