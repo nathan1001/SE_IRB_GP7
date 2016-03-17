@@ -21,13 +21,15 @@ Also, send one hard copy of signed original approval form with a complete copy o
  <b>________________________________________</b><p>
 
 <form action="add.php" method="GET">
-	Title of Project: <input type="text" name="username" maxlength="10"/>
-  Principal Investigator: Click here to enter text.
-Co-Principal Investigator(s): Click here to enter text.
-Click here to enter text.
-Principal Investigator Department Click here to enter text.
-Principal Investigator Phone Click here to enter text.
-Email Click here to enter text. Fax Click here to enter text.
+	Title of Project: <input type="text" name="username" maxlength="10"/><p>
+
+  Principal Investigator: <input type="text" name="username" maxlength="10"/><p>
+Co-Principal Investigator(s):<input type="text" name="username" maxlength="10"/><p>
+
+Principal Investigator Department <input type="text" name="username" maxlength="10"/><p>
+Principal Investigator Phone <input type="text" name="username" maxlength="10"/><p>
+Email<input type="text" name="username" maxlength="10"/><p>
+ Fax <input type="text" name="username" maxlength="10"/><p>
 	<!-- UserGroup:<select name="usergroup">
 <option value="1">Admin</option>
 <option value="2">Faculty</option>
