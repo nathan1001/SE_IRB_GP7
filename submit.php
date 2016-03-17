@@ -9,18 +9,32 @@ The committee will respond to each proposal within four weeks following its revi
 All submissions must be in digital form. The submission must be approved with signature from the Committee Chair. Submissions are accepted on an ongoing basis.
 All submissions must be made using the Ashesi University Human Subjects Review Form. The form is found on the following pages and is also available at: website. Applications that are incomplete will not be forwarded to the Committee for review. Incomplete applications will be returned to the applicant. Applicants are advised to be mindful of schedules and time requirements for the review process and urged to submit proposals as early as possible.<p>
   <b>Request for Human Subjects Approval</b><p>
+   <b>________________________________________</b><p>
 
 
+<b>General Research Application Form</b><p>
+<b>Use this form for general research only. It is not for health or medical research
+Use this form for initial approvals and protocol modifications. To renew an approval after one year, please use the Continuation Form.
+Submit this completed form and your proposal with all required elements as email attachments to the office of the Provost, Ashesi University College: (irb@ashesi.edu.gh).
+Also, send one hard copy of signed original approval form with a complete copy of your research proposal and all required elements to: Human Subjects Review Committee, Ashesi University, Berekuso, E.R., Ghana.
+</b><p>
+ <b>________________________________________</b><p>
 
-  
 <form action="add.php" method="GET">
-	Username: <input type="text" name="username" maxlength="10"/>
-	UserGroup:<select name="usergroup">
+	Title of Project: <input type="text" name="username" maxlength="10"/>
+  Principal Investigator: Click here to enter text.
+Co-Principal Investigator(s): Click here to enter text.
+Click here to enter text.
+Principal Investigator Department Click here to enter text.
+Principal Investigator Phone Click here to enter text.
+Email Click here to enter text. Fax Click here to enter text.
+	<!-- UserGroup:<select name="usergroup">
 <option value="1">Admin</option>
 <option value="2">Faculty</option>
 <option value="3">Students</option>
-</select>
-<input type="submit" value="add"/>
+</select> -->
+<p>
+<input type="submit" value="submit"/>
 
 </form>
 
