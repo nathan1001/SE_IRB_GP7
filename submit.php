@@ -43,16 +43,28 @@ Please do not attempt to squeeze answers into the spaces provided on this form. 
 Click here to enter text:<input type="text" name="username" size="100" maxlength="100"/><p>
  <b>II. Numbers, Types and Recruitment of Subjects </b><p>
 A. Identify the numbers and characteristics of subjects (e.g., age ranges, sex, ethnic background, health status, disabilities, etc.).
-Click here to enter text
+Click here to enter text:<input type="text" name="username" size="100" maxlength="100"/><p>
 B. Special Classes. If applicable, explain the rationale for the use of special classes or subjects such as pregnant women, children, prisoners, mentally impaired, institutionalized, or others who are likely to be particularly vulnerable.
-Click here to enter text.
+<p>Click here to enter text:<input type="text" name="username" size="100" maxlength="100"/><p>
 C. How are the individual participants to be recruited for this research? Is it clear to the subjects that participation is voluntary and that they may withdraw at any time without negative consequences?
-Click here to enter text.
+<p>Click here to enter text:<input type="text" name="username" size="100" maxlength="100"/><p>
 D. To what extent and how are the subjects to be informed of research procedures before their participation?
-Click here to enter text.
+<p>Click here to enter text:<input type="text" name="username" size="100" maxlength="100"/><p>
 E. Attach a copy of the written "Informed Consent” form or a written statement of the oral consent. If this is produced in vernacular languages please provide a copy in each language being used in field work. The consent form should include the purpose of the research, that the engagement is voluntary, duration of engagement with the subject, risk and benefit, contact information. See template below
+<p>Upload:<input type="file" name="fileToUpload" id="fileToUpload"><p>
+F. How will you classify your research method ? (experiment, observation, modeling, etc.) Specify all methods you anticipate to use.
+<p>Click here to enter text:<input type="text" name="username" size="100" maxlength="100"/><p>
+G. Specify the data sources you will use for your research (e.g. questionnaire, audio recording of interview, human resource files, experiment data, etc.)
+<p>Click here to enter text:<input type="text" name="username" size="100" maxlength="100"/><p>
 
+<b>III. Risks Involved in the Research</b><p>
 
+<b>If your nature of your study is biomedical, public health, or clinical psychological research, then you cannot use this form. Please use the right form.</b>
+<p>Upload:<input type="file" name="fileToUpload" id="fileToUpload"><p>
+Identify potential risks for subjects to be involved in this project/research. What procedures will be in place to minimize any risks to subjects?
+<p><b>Does the research involve any of the following procedures?<b><p>
+
+  
   <!-- UserGroup:<select name="usergroup">
   <option value="1">Admin</option>
   <option value="2">Faculty</option>
