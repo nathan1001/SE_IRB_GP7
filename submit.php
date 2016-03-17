@@ -83,16 +83,17 @@ invasion of privacy?<p>
 <b>Confidentiality</b><p>
 A. To what extent is the information confidential and to what extent are provisions made so that
 subjects are not identified?<p>
-Click here to enter text.<p>
+<p>Click here to enter text:<input type="text" name="username" size="100" maxlength="100"/><p>
+
 B. What are the procedures for handling and storing data so that confidentiality of the subjects
 and privacy are protected? Particular attention should be given if research data will
 include the use of photographs, video and audio recordings, computer files, organizational
 records, medical records, financial records with individual or corporate information)?<p>
-Click here to enter text.<p>
+<p>Click here to enter text:<input type="text" name="username" size="100" maxlength="100"/><p>
 C. How will the results of the research be disseminated?<p>
-Click here to explain.<p>
+<p>Click here to enter text:<input type="text" name="username" size="100" maxlength="100"/><p>
 How will the subjects be informed of the results?<p>
-Click here to explain.<p>
+<p>Click here to enter text:<input type="text" name="username" size="100" maxlength="100"/><p>
 How will confidentiality of subjects or organizations be protected in the dissemination?<p>
 Click here to explain.
   <!-- UserGroup:<select name="usergroup">
