@@ -95,13 +95,97 @@ C. How will the results of the research be disseminated?<p>
 How will the subjects be informed of the results?<p>
 <p>Click here to enter text:<input type="text" name="username" size="100" maxlength="100"/><p>
 How will confidentiality of subjects or organizations be protected in the dissemination?<p>
-Click here to explain.
-  <!-- UserGroup:<select name="usergroup">
-  <option value="1">Admin</option>
-  <option value="2">Faculty</option>
-  <option value="3">Students</option>
-  </select> -->
+<p>Click here to enter text:<input type="text" name="username" size="100" maxlength="100"/><p>
 
+<b>V. Describe any anticipated benefits to subjects from participation in this research.</b>
+
+A. Will participants/subjects/respondents be compensated or rewarded in any way?
+<p>Click here to enter text:<input type="text" name="username" size="100" maxlength="100"/><p>
+B. What intrinsic benefits will participants/subjects/respondents receive?
+<p>Click here to enter text:<input type="text" name="username" size="100" maxlength="100"/><p>
+
+ <b> VI. Submitting Your Protocol – CHECKLIST</b><p>
+ Attach a full copy of your research proposal (grant, thesis, dissertation proposal, etc.)
+ <p>Upload:<input type="file" name="fileToUpload" id="fileToUpload"><p>
+
+If full proposal is not available, explain why this document is not available.
+<p>Click here to enter text:<input type="text" name="username" size="100" maxlength="100"/><p>
+In the alternative to full copy of proposal, attach a narrative summary of your proposal
+<p>Upload:<input type="file" name="fileToUpload" id="fileToUpload"><p>
+
+  ☐ Regardless of whether or not a full research proposal is available, attach a concise, two-page summary on a separate page that includes:
+<p>
+ A brief summary of the background literature stimulating this research<p>
+ The rationale for the proposed study, including specific aims and hypotheses<p>
+ A description of the participants and how they will be recruited<p>
+ A detailed description of study methodology<p>
+ Budget and Schedule (timeline) details of your research proposal<p>
+<p>Upload:<input type="file" name="fileToUpload" id="fileToUpload"><p>
+
+  <b>NOTE: </b>You may “cut-and-paste” as needed from your full proposal, if available, and the committee may refer to the full proposal for clarification.
+
+<p>☐Consent Agreement(s) including description of how informed consent will be obtained--<p>
+  <b>NOTE: </b> Please add the following statement to the final copy of your Informed Consent
+Agreement:<p>
+<i> “This research protocol has been reviewed and approved by the Ashesi University Human Subjects Review Committee. 
+If you have questions about the approval process, please contact Chair,
+ Ashesi University HSCR, <b>(chair’s Ashesi e-mail address).</b></i><p>
+
+☐Copies of all instruments, questionnaires, or tests to be used (if instruments are not fully developed yet, attach drafts, and so indicate).<p>
+Qualitative discussion categories are provided.<p>
+☐ Flyers to be posted on or off campus for participant enlistment (NOTE: These must be stamped with Committee Approval prior to posting)
+<p>
+
+
+  <b>Principal Investigator </b> 
+Click here to enter text:<input type="text" name="username" maxlength="100"/><p>
+
+   </b>Date <p>Click here to enter text:<input type="text" name="username" maxlength="100"/><p>
+
+<b>Submit this completed form and your proposal with all required elements as email attachments to (we need a submission e-mail box and a physical mailbox). Also, send one hard copy of signed original approval form with proposal and all required elements to: Ashesi University Human Subjects Review Committee, Office of the Provost, Ashesi University, Berekuso, E.R. Ghana
+</b><p>
+
+<b>Optional: Use this only if necessary for your project.
+Rationale for Exclusion of a Required Element:</b>
+Click here to enter text:<input type="text" name="username" maxlength="100"/><p>
+
+
+Extension:
+Click here to enter text:<input type="text" name="username" maxlength="100"/><p>
+
+<b>Consent Form Template</b><p>
+Note: This template is just a guide. As long as a consent form has all the elements of this template, you are free to design your consent form that fits your research and subject. A consent can be written or verbal, but in both cases a consent from has to be prepared and designed.
+<p> We/I like to ask your permission to be part of ….<p>
+ The purpose of this study is….<p>
+ Your participation will be ….<p>
+<p> You are free to be part of this activity, and you are free to stop at any moment during the activity.
+ This risk of being part of this study is….<p>
+ The benefit is ……<p>
+ If you have any question, you can ask…..<p>
+ If you agree to be part of the study, …..<p>
+ For further information, you can contact my supervisor …..<p>
+ This study and consent form has been reviewed by Ashesi IRB for Human Subjects Research. For further information contact the committee through irb@ashesi.edu.gh
+<p>
+  <b>Exempt Activities</b><p>
+Investigators may not determine their own research to be exempt from HSRC review. Exemption decisions are made through the expedited review process.<p>
+Activities that are not research are exempt from HSRC review. Research is defined as: “A systematic investigation designed to develop or contribute to generalizable knowledge.”
+<p>Research that does not involve human subjects is also exempt from HSRC review. A human subject is defined as “a living individual about whom an investigator conducting research obtains (1) data through intervention or interaction with the individual, or (2) identifiable private information.”
+<p>Research activities in which the only involvement of human subjects will be in one or more of the following categories may be determined to be exempt from Ashesi University HSRC review. Requests for exemption must cite the statutory basis for the requested exemption from the categories listed below:
+I. Research<p>
+A. Research conducted in established or commonly accepted educational settings, involving normal education practices.
+<p>B. Research involving the use of educational tests (cognitive, diagnostic, aptitude, achievement), if information taken from these sources is recorded in such a manner that subjects cannot be identified, directly or indirectly, through identifiers linked to the subjects.
+<p>C. Research involving observation of public behavior or survey or interview procedures for all of the conditions below. This exemption does not apply for research involving children except when the investigator does not participate in activities being observed.
+<p>(1) The research does not place subjects at the risk of civil or criminal liability or damage the subject's financial standing or employability, AND
+<p>(2) The research does not deal with sensitive aspects of the subject's own behavior, such as illegal conduct, drug use, sexual behavior or use of alcohol, AND
+<p>(3) The research does not use materials, procedures or settings likely to be embarrassing, upsetting or intrusive to the subjects, AND
+<p>(4) The subject cannot be identified and confidentiality is protected
+<p>D. All research involving survey or interview procedures is exempt, without exception, when the subject is an elected or appointed official or a candidate for public office.
+13
+<p>E. Research involving the collection or study of existing data, documents, records, pathological specimens, or diagnostic specimens, if these sources are publicly available or if the information is recorded in such a manner that subjects cannot be identified directly or indirectly through identifiers linked to the subject.
+<p>II. Program Review
+<p>A. Government Regulations Exemptions. Research and demonstration projects that are conducted by or subject to the approval of Ghana government department or agency heads, and that are designed to study, evaluate, or otherwise examine 1) public benefit or service programs; 2) procedures for obtaining benefits or services under those programs; 3) possible changes in or alternatives to those programs or procedures; or 4) possible changes in methods or levels of payment for benefits or services under those programs.
+<p>B. Ashesi Academic Program Review Data. Data collected for the purpose of the evaluation, review, and improvement of Ashesi University academic and extra-curricular programs is exempt from review unless these data are collected: 1) for use beyond program review (e.g. publication), and/or 2) for publication beyond the review process for Ashesi programs administered by Ashesi, by its associated accrediting agencies, and by other related educational bodies. Program Review research proposals that meet the criteria for exemption from review do not need to be sent to the Ashesi HSRC, however, it is advisable to do so as a courtesy and also to provide pre-project approval in case that decisions about external dissemination or publication change during the course of the project.
+<p>Note: The above exemptions do not apply to research involving venerable groups like prisoners or mentally-ill, institutionalized patients as subjects.
 
 
 
