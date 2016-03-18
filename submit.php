@@ -20,7 +20,7 @@
   </b><p>
   <b>____________________________________________________________________________________</b><p>
   
-  <form action="add.php" method="GET">
+  <form action="submit.php" method="GET">
   Title of Project: <input type="text" name="username" maxlength="10"/><p>
   
   Principal Investigator: <input type="text" name="username" maxlength="10"/><p>
@@ -188,50 +188,40 @@
   <p>Note: The above exemptions do not apply to research involving venerable groups like prisoners or mentally-ill, institutionalized patients as subjects.
   
   
-  
-  
   <p>
-  <input type="submit" value="submit"/>
+  <input type="submit" value="add"/>
   
   </form>
   
   </body>
   </html>
 
-  <?php
-    // helps connect to the database 
-  include_once("adb.php");
-
- // this runs only if the irb applicant has hit the "submit" button
-  if(!isset($_REQUEST["submit"])){
   
-  exit();
-  
-}
-  
-  $appId=$_REQUEST["appId"];
-  $projectTitle=$_REQUEST["projectTitle"];
-
+<?php
+  if(!isset($_REQUEST['username'])){
+    exit();   //if no data, exit
+  }
+  print_r($_REQUEST);
+  $username=$_REQUEST['username'];
+  $usergroup=$_REQUEST['usergroup'];
+  $pword=$_REQUEST['pword'];
+  $db=new mysqli("localhost","root","9144","test");
   if($db->connect_errno){
-    
+    //no connection, exit
     exit();
   }
-  else{
-    
-    //echo "connected!";
-  }
-  
-  $sql="insert into completed set 
-    appId='$appId',
-    projectTitle='$projectTitle',
-    ";
-   
-  
-  if($db->query($sql)){
-    echo "Form Submitted Successfully";
+  $strQuery="insert into user set
+        USERNAME='$username',
+        FIRSTNAME='none',
+        LASTNAME='none',
+        PWORD=MD5('$pword'),
+        USERGROUP=$usergroup";
+  //echo $strQuery;
+  if($db->query($strQuery)){
+    echo "Data Added";
   }else{
-    echo "Error submitting forms";
+    echo "Error while adding data";
   }
   
   
-  ?>
+?>
