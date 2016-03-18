@@ -202,10 +202,10 @@
     echo" Please be sure to fill in all the required fields. Thank you.";
     exit();   //if no data, exit
   }
-// print_r($_REQUEST);
+ print_r($_REQUEST);
   $ProjectTitle=$_REQUEST['ProjectTitle'];
 
-  $db=new mysqli("localhost","root","9144","testirb");
+  $db=new mysqli("localhost","root","9144","irbtest");
   if($db->connect_errno){
     echo"no connection, exit";
     exit();
