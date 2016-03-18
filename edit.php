@@ -9,7 +9,7 @@ class edit extends projectuser2{
 	function edit(){
 	}
 	/**
-	*edits a saved application
+	*saves application data into incomplete application table
 	*@param string projectTitle project name
 	*@param string principalInvestigator applicant name
 	*@param string coprincipalInvestigators colleague(s) name
@@ -22,10 +22,23 @@ class edit extends projectuser2{
 	*@param string demographicA the numbers and characteristics of subjects (e.g., age ranges, sex, ethnic background, health status, disabilities, etc.)
 	*@param string demographicB special classes for participants
 	*@param string demographicD how informed the participants are
-	*@param BLOB informedConsent informed consent from participants
+	*@param string informedConsent string value for  informed consent from participants file directory on file server
 	*@param string demographicF classification  and specification for research methods
 	*@param string demographicG description of data sources used in research
-	*@param array
+	*@param array Risk potential risks invovled with research
+	*@param string RiskYes if any risks are selected applicant describes how to mitigate them
+	*@param string ConfidentialityA answer provisions made for confidentiality
+	*@param string ConfidentialityB answers data storing and privacy measures for research
+	*@param string ConfidentialityCi how research is disseminated
+	*@param string ConfidentialityCii how subjects are informed of results
+	*@param string ConfidentialityCiii how subjects will be protected
+	*@param string BenefitsA description of how subjects will be rewarded
+	*@param string BenefitsB description of what benefits 
+	*@param string researchProposal the string value of the directory where research proposal or research narrative is stored
+	*@param string instruments the string value of the director where research instruments are uploaded
+	*@param string flyers the string value for the directory where flyers are uploaded
+	*@param string exclusion explaination for why an element should be excluded form the HSRC
+	*@param string extension why an extension should be granted to the project
 	*@return boolean returns true if successful or false 
 	*/
 	function save($projectTitle,$principalInvestigator='none',$coprincipalInvestigators='none',$principalInvestigatorDept='none',$principalInvestigatorPhone,$principalInvestigatorEmail,$principalInvestigatorFax,$externalGrant,$hsrcExemption,$demographicA,$demographicB,$demographicC,$demographicD,$informedConsent,$demographicF,$demographicG,$Risk,$RiskYes,$ConfidentialityA,$ConfidentialityB,$ConfidentialityCi,$ConfidentialityCii,$ConfidentialityCiii,$BenefitsA,$BenefitsB,$reserachProposal,$researchProposalNo,$summary,$consentAgreements,$instruments,$flyers,$exclusion,$extension){
@@ -58,7 +71,6 @@ class edit extends projectuser2{
 						reserachProposal='$reserachProposal',
 						researchProposalNo='$researchProposalNo',
 						summary='$summary',
-						consentAgreements='$consentAgreements',
 						instruments='$instruments',
 						flyers='$flyers',
 						exclusion='$exclusion',
@@ -66,8 +78,12 @@ class edit extends projectuser2{
 
 		return $this->query($strQuery);				
 	}
-}
-function openApplication($incompleteID){
+	/**
+	*gets Application data in the incomplete table
+	*@param int incompleteID ID for the application saved by user
+	*@return boolean returns true if successful or false
+	*/
+function getIncomplete($incompleteID){
 	$strQuery= "select * from incomplete where incompleteID='incompleteID'";
 	return $this->query($strQuery);
 	}
