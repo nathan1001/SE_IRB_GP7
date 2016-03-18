@@ -7,12 +7,12 @@
 	   	//create an object of users and delete the user
 		$obj = new projectUsers2();
 
-		$result = $obj->searchUsers($_REQUEST['usercode']);
+		$result = $obj->searchUsers($_REQUEST['username']);
 		
 		if ($result){
 
 			$result = $obj->fetch();
-			if($username == $result['PASSWORD']){
+			if($_REQUEST['password'] == $result['PASSWORD']){
 
 			//access the page
 			}
