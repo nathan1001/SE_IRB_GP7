@@ -197,17 +197,21 @@
   
   </body>
   </html>
+
   <?php
-  
-  if(!isset($_REQUEST["username"])){
+    // helps connect to the database 
+  include_once("adb.php");
+
+ // this runs only if the irb applicant has hit the "submit" button
+  if(!isset($_REQUEST["submit"])){
   
   exit();
   
 }
   
-  $username=$_REQUEST["username"];
-  $usergroup=$_REQUEST["usergroup"];
-  $db=new mysqli('127.0.0.1','root','9144','test');
+  $username=$_REQUEST["appId"];
+  $usergroup=$_REQUEST["projectTitle"];
+
   if($db->connect_errno){
     
     exit();
