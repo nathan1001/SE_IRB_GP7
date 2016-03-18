@@ -1,11 +1,11 @@
 <?php
 /**
 */
-include_once("projectuser2.php")
+include_once("adb.php")
 /**
 *edit  class
 */
-class edit extends projectuser2{
+class edit extends adb{
 	function edit(){
 	}
 	/**
