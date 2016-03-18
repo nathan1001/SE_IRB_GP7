@@ -21,7 +21,7 @@
   <b>____________________________________________________________________________________</b><p>
   
   <form action="submit.php" method="GET">
-  Title of Project: <input type="text" name="username" maxlength="10"/><p>
+  Title of Project: <input type="text" name="ProjectTitle" maxlength="10"/><p>
   
   Principal Investigator: <input type="text" name="username" maxlength="10"/><p>
   Co-Principal Investigator(s):<input type="text" name="username" maxlength="10"/><p>
@@ -189,7 +189,7 @@
   
   
   <p>
-  <input type="submit" value="add"/>
+  <input type="submit" value="Submit Completed Form"/>
   
   </form>
   
@@ -198,29 +198,27 @@
 
   
 <?php
-  if(!isset($_REQUEST['username'])){
+  if(!isset($_REQUEST['ProjectTitle'])){
+    echo" Please be sure to fill in all the required fields. Thank you.";
     exit();   //if no data, exit
   }
-  print_r($_REQUEST);
-  $username=$_REQUEST['username'];
-  $usergroup=$_REQUEST['usergroup'];
-  $pword=$_REQUEST['pword'];
-  $db=new mysqli("localhost","root","9144","test");
+ print_r($_REQUEST);
+  $ProjectTitle=$_REQUEST['ProjectTitle'];
+
+  $db=new mysqli("localhost","root","9144","testirb");
   if($db->connect_errno){
-    //no connection, exit
+    echo"no connection, exit";
     exit();
   }
-  $strQuery="insert into user set
-        USERNAME='$username',
-        FIRSTNAME='none',
-        LASTNAME='none',
-        PWORD=MD5('$pword'),
-        USERGROUP=$usergroup";
+  $strQuery="insert into completed set
+        ProjectTitle='$ProjectTitle'
+        ";
   //echo $strQuery;
   if($db->query($strQuery)){
-    echo "Data Added";
+    echo "Form Submitted. Thank you for your submission";
   }else{
-    echo "Error while adding data";
+    echo "Error while submitting form. You haven't filled all the required fields. Please do so.
+    Thank you.";
   }
   
   
