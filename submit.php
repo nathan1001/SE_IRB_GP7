@@ -209,8 +209,8 @@
   
 }
   
-  $username=$_REQUEST["appId"];
-  $usergroup=$_REQUEST["projectTitle"];
+  $appId=$_REQUEST["appId"];
+  $projectTitle=$_REQUEST["projectTitle"];
 
   if($db->connect_errno){
     
@@ -221,19 +221,16 @@
     //echo "connected!";
   }
   
-  $sql="insert into user set 
-    username='$username',
-    FIRSTNAME='none',
-    LASTNAME='none',
-    PWORD=MD5('none'),
-    USERGROUP='$usergroup'";
-    
-    ;
+  $sql="insert into completed set 
+    appId='$appId',
+    projectTitle='$projectTitle',
+    ";
+   
   
   if($db->query($sql)){
-    echo "Data Added";
+    echo "Form Submitted Successfully";
   }else{
-    echo "Error while adding data";
+    echo "Error submitting forms";
   }
   
   
