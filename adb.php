@@ -64,7 +64,7 @@ $this->db=new mysqli(DB_HOST,DB_USERNAME,DB_PASSWORD,DB_NAME);
 }
 
 $obj=new adb();
-if(!$obj->query("select * from user"))
+if(!$obj->query("select * from completed"))
 {
 	echo "other error";
 	exit();
