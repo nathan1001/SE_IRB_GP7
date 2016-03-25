@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 	define("DB_HOST","localhost");
 	define("DB_USERNAME","root");
 	define("DB_PASSWORD","9144");
@@ -11,4 +12,10 @@
 //ashesics_aea4740','w1c6g2mec593','ashesics_emmanuel_annor
 
 
+=======
+define("DB_HOST","localhost");
+define("DB_USERNAME","root");
+define("DB_PASSWORD","");
+define("DB_NAME","usersgh");
+>>>>>>> login
 ?>

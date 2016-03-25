@@ -16,16 +16,13 @@ class adb{
 	*@return boolean ture if connected else false
 	*/
 	function connect(){
-		
 		//connect
-$this->db=new mysqli(DB_HOST,DB_USERNAME,DB_PASSWORD,DB_NAME);
-		//$this->db=new mysqli('127.0.0.1','root','9144','test');
+		$this->db=new mysqli(DB_HOST,DB_USERNAME,DB_PASSWORD,DB_NAME);
 		if($this->db->connect_errno){
 			//no connection, exit
-						return false;
+			return false;
 		}
-		else{
-		return true;}
+		return true;
 	}
 	
 	/**
@@ -62,13 +59,5 @@ $this->db=new mysqli(DB_HOST,DB_USERNAME,DB_PASSWORD,DB_NAME);
 		return $this->result->fetch_assoc();
 	}
 }
-
-$obj=new adb();
-if(!$obj->query("select * from completed"))
-{
-	echo "other error";
-	exit();
-}
-//print_r($obj->fetch());
 
 ?>
