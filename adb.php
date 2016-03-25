@@ -1,4 +1,4 @@
-<?php
+ <?php
 /**
 *Database connection helper
 */
@@ -47,6 +47,10 @@ class adb{
 	*@return array one record
 	*/
 	function fetch(){
+		
+		if(!$this->connect()){
+			return false;
+		}
 		//Complete this funtion to fetch from the $this->result
 		if($this->result==null){
 			return false;
@@ -59,5 +63,18 @@ class adb{
 		return $this->result->fetch_assoc();
 	}
 }
+<<<<<<< HEAD
 
+=======
+/*
+This is a test code
+$obj=new adb();
+if(!$obj->query("select * from users"))
+{
+	echo "error";
+	exit();
+}
+print_r($obj->fetch());
+*/
+>>>>>>> origin/upload
 ?>
