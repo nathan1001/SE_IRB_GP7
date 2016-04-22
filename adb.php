@@ -1,4 +1,4 @@
- <?php
+<?php
 /**
 *Database connection helper
 */
@@ -16,6 +16,7 @@ class adb{
 	*@return boolean ture if connected else false
 	*/
 	function connect(){
+		
 		//connect
 		$this->db=new mysqli(DB_HOST,DB_USERNAME,DB_PASSWORD,DB_NAME);
 		if($this->db->connect_errno){
@@ -47,10 +48,6 @@ class adb{
 	*@return array one record
 	*/
 	function fetch(){
-		
-		if(!$this->connect()){
-			return false;
-		}
 		//Complete this funtion to fetch from the $this->result
 		if($this->result==null){
 			return false;
@@ -63,9 +60,6 @@ class adb{
 		return $this->result->fetch_assoc();
 	}
 }
-<<<<<<< HEAD
-
-=======
 /*
 This is a test code
 $obj=new adb();
@@ -76,5 +70,4 @@ if(!$obj->query("select * from users"))
 }
 print_r($obj->fetch());
 */
->>>>>>> origin/upload
 ?>
