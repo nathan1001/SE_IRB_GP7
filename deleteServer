@@ -1,0 +1,33 @@
+<!--Author:
+*Stephanie Belnye
+*StudentID: 64802017
+*Project Title:IRB Application
+*Functional Requirement: Deleting Forms
+-->
+<?php
+  /**
+  *check to see if an id has been passed and displays an error message if not
+  */
+  if(!isset($_REQUEST['appid'])){
+		echo '{"result":0,"message":"user code is not correct"}';
+		return;
+	}
+  include_once('projectUsers2.php');
+  $id=$_REQUEST['appid'];
+  /**
+	*create an object of projectUsers2users
+  *calls the deleteForm fron the projectUser2 class to delete the record from the database
+  */
+	$obj=new projectUsers2();
+	$row=$obj->deleteForm($id);
+
+	if($row==false){
+		echo '{"result":0,"message":"error retrieving details "}';
+	}
+	else{
+		echo '{"result":1,"message":"you can edit details now"}';
+	}
+
+
+
+?>
