@@ -1,0 +1,112 @@
+<!--
+*Stephanie Belnye
+*StudentID: 64802017
+*Project Title:IRB Application
+*Functional Requirement: Deleting Forms
+-->
+<html>
+   <head>
+      <title>IRB Application</title>
+      	<script type="text/javascript" src="js/jquery-1.12.1.js"></script>
+      <link rel="stylesheet" type="text/css" href="style.css"/><!-- External css file extension-->
+   </head>
+   <script>
+     var tablerow;
+
+     /**
+     *callback function for deleteRecord ajax call
+     */
+     function deleteRecordComplete(xhr, status) {
+     document.getElementById('divStatus').innerHTML='inside deleteRecordComplete';
+       if (status != "success") {
+            divStatus.innerHTML = "error while deleteing a page";
+           return;
+         }
+
+       var i = tablerow.parentNode.parentNode.rowIndex;
+       alert(i);
+       console.log(i);
+       document.getElementById("myTable").deleteRow(i);
+       }
+       /**
+ 			*makes an AJAX call to the server
+ 			*/
+       function deleteRecord(row,recordID) {
+       document.getElementById('divStatus').innerHTML=row;
+       var ajaxPageUrl = "deleteServer.php?appid=" + recordID;
+       if (confirm('Are You Sure You Want To Delete Application ' + recordID)) {
+           $.ajax(ajaxPageUrl,
+                   {async: true, complete: deleteRecordComplete
+                   }
+           );
+           tablerow = row;
+       }
+   }
+   </script>
+   <body>
+      <div id="container">
+        <div id="header1">
+           <img src="image2" alt="Ashesi Logo" align="left" style="width:10%;height:100%;">
+           <h1><b>ASHESI UNIVERSITY COLLEGE IRB APPLICATION PORTAL</b> </h1>
+           <nav id="nav">
+                    <ul>
+                      <li>
+                        <a href="WelcomePage.php">Home</a>
+                      </li>
+                      <li>
+                        <a href="index-2.html">Apply</a>
+                      </li>
+                      <li>
+                        <a href="List.php">List of Forms</a>
+                      </li>
+                      <li>
+                        <a href="#">History</a>
+                      </li>
+                      <li>
+                        <a href="#">Contact</a>
+                      </li>
+                    </ul>
+                  </nav>
+      </div>
+         <div id="divStatus" class="status">
+           status message
+         </div>
+          <div class="menu"><h2 align = "center"> List of Submitted Forms </h2></div>
+
+          <div id="content">
+
+            <?php
+           include_once('projectUsers2.php');
+            $obj= new projectUsers2;
+            $obj->getApplications();
+            $row=  $obj->getApplications();
+            if (!$row){
+              echo "Error";
+            }
+            $r=$obj->fetch();
+            $appid = $r['ApplicantId'];
+            if (!$r){
+              echo "Error";
+            }
+                /**
+                *prints out information in a table
+                */
+                echo "<table border='1' id='myTable' ><tr><th>CompletedFormId</th><th>ApplicantId</th><th>FirstName</th><th>LastName</th>
+                <th>DELETE</th></tr>";
+                while ($r){
+                  echo"<tr><td>{$r['CompletedFormId']}</td>
+                   <td>{$r['ApplicantId']}</td>
+                   <td>{$r['FirstName']}</td>
+                   <td>{$r['LastName']}</td>
+                   <td> <span onclick='deleteRecord(this,{$r['ApplicantId']})'>delete</span></td></tr>";
+
+                  $r=$obj->fetch();
+                }
+                echo "</table>";
+             ?>
+</div>
+<footer id="footer">
+              <br>2016 ASHESI UNIVERSITY COLLEGE IRB BOARD</br>
+</footer>
+</body>
+</html>
