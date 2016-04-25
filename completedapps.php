@@ -1,10 +1,9 @@
 <?php
    /**
-    */
-   include_once("adb.php");
-   /**
-   *completedapps  class with necessaray function to submit a completed form
+   *completedapps  class has the submitForm($ProjectTitle) function which helps to submit a completed form by submit the form details into the database
    */
+   include_once("adb.php");
+   
    class completedapps extends adb{
    function completedapps(){
    }
