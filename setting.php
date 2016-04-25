@@ -1,7 +1,7 @@
 <?php
 	define("DB_HOST","localhost");
 	define("DB_USERNAME","root");
-	define("DB_PASSWORD","9144");
+	define("DB_PASSWORD","");
 	define("DB_NAME","irbtest");
 // define("DB_HOST","localhost");
 // define("DB_USERNAME","ashesics_aea4740");
