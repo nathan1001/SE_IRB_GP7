@@ -1,0 +1,127 @@
+<html>
+<head>
+<title>Upload Documents </title>
+  <link rel="stylesheet" type="text/css" href="style.css"/><!-- External css file extension-->
+</head>
+<body>
+  <div id="header1">
+     <img src="image2" alt="Ashesi Logo" align="left" style="width:10%;height:100%;">
+     <h1><b>ASHESI UNIVERSITY COLLEGE IRB APPLICATION PORTAL</b> </h1>
+     <nav id="nav">
+              <ul>
+                <li>
+                  <a href="WelcomePage.php">Home</a>
+                </li>
+                <li>
+                  <a href="Apply.php">Apply</a>
+                </li>
+                <li>
+                  <a href="UploadForm.php">Upload Documents</a>
+                </li>
+                <li>
+                  <a href="#">History</a>
+                </li>
+                <li>
+                  <a href="#">Contact</a>
+                </li>
+              </ul>
+            </nav>
+</div>
+  <div id="content">
+<form id="file-form" action="UploadForm.php" method="post" enctype="multipart/form-data">
+  <div> UPLOAD ALL EXTRA DOCUMENTS HERE </div>
+<div>
+  <form action="UploadForm.php" method="post" enctype="multipart/form-data">
+
+     Attach a copy of the written "Informed Consent” form or a written statement of the oral consent. If this is produced in vernacular languages please provide a copy in each language being used in field work. The consent form should include the purpose of the research, that the engagement is voluntary, duration of engagement with the subject, risk and benefit, contact information. See template below
+    <p>Upload:<input type="file" name="fileToUpload" id="fileToUpload">
+    </p>
+    </div>
+    <div>
+    <b>If your nature of your study is biomedical, public health, or clinical psychological research, then you cannot use this form. Please use the right form.</b>
+    <p>Upload:<input type="file" name="fileToUpload" id="fileToUpload">
+    <p>
+    </div>
+    <div>
+      Attach a full copy of your research proposal (grant, thesis, dissertation proposal, etc.)
+    <p>Upload:<input type="file" name="fileToUpload" id="fileToUpload">
+    <p>
+    </div>
+    <div>
+      In the alternative to full copy of proposal, attach a narrative summary of your proposal
+    <p>Upload:<input type="file" name="fileToUpload" id="fileToUpload">
+    <p>
+    </div>
+    <div>
+       Budget and Schedule (timeline) details of your research proposal
+    <p>
+    <p>Upload:<input type="file" name="fileToUpload" id="fileToUpload">
+    <p>
+    </div>
+</form>
+
+<?php
+$target_dir = "uploads/";
+$target_file='';
+
+if (isset($_FILES["fileToUpload"]))
+{
+//echo   $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+  echo "file chosen";
+  echo filetype($_FILES["fileToUpload"]);
+}
+else
+{
+  echo "error";
+}
+$uploadOk = 1;
+$pathinfo=
+$filetype = pathinfo($target_file,PATHINFO_EXTENSION);
+// Check if image file is a actual document or fake document
+if(isset($_POST["submit"])) {
+    $check = filesize($_FILES["fileToUpload"]["tmp_name"]);
+    if($check !== false) {
+        echo "File is a word document - " . $check["mime"] . ".";
+        $uploadOk = 1;
+    } else {
+        echo "File is not a word document.";
+        $uploadOk = 0;
+    }
+}
+
+// Check if file already exists
+if (file_exists($target_file)) {
+    echo "Sorry, file already exists.";
+    $uploadOk = 0;
+}
+
+// Check file size
+if ($_FILES["fileToUpload"]["size"] > 500000) {
+    echo "Sorry, your file is too large.";
+    $uploadOk = 0;
+  }
+
+  // Allow certain file formats
+if($filetype != ".doc" && $filetype != ".docx" && $filetype != "pdf" ) {
+    echo "Sorry, only .doc, .docx & .pdf files are allowed.";
+    $uploadOk = 0;
+}
+
+// Check if $uploadOk is set to 0 by an error
+if ($uploadOk == 0) {
+    echo "Sorry, your file was not uploaded.";
+// if everything is ok, try to upload file
+} else {
+    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+        echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
+    } else {
+        echo "Sorry, there was an error uploading your file.";
+    }
+  }
+
+?>
+<footer id="footer">
+              <br>2016 ASHESI UNIVERSITY COLLEGE IRB BOARD</br>
+</footer>
+</body>
+</html>
