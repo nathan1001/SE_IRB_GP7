@@ -10,21 +10,10 @@
          function submitFormComplete(xhr,status){
          
             if(status!="success"){
-               divStatus.innerHTML="error while submitting form";
+               divStatus.innerHTML="error while deleteing a page";
                return;
             }
-            var obj=$.parseJSON(xhr.responseText);
-            if(obj.result==0){
-               divStatus.innerHTML=obj.message; 
-            }else{
-               
-               divStatus.innerHTML="Form submitted completed ";
-                  echo "did it work";
-            }
-            
-            currentObject=null;
-         
-         
+            divStatus.innerHTML=xhr.responseText;
             
          }
          /**
@@ -34,7 +23,67 @@
          function submitForm(){
                     
          var ProjectTitle=$("#ProjectTitle").val();  
-            var ajaxPageUrl="submitFormImplement.php?cmd=1&ProjectTitle="+ProjectTitle; 
+         var principalInvestigator=$("#principalInvestigator").val();  
+         var principalInvestigatorDept=$("#principalInvestigatorDept").val();  
+         var principalInvestigatorPhone=$("#principalInvestigatorPhone").val();  
+         var principalInvestigatorEmail=$("#principalInvestigatorEmail").val();  
+         var principalInvestigatorFax=$("#principalInvestigatorFax").val();  
+         var externalGrant=$("#xternalGrant").val();  
+         var hsrcExemptionhsrcExemption=$("#hsrcExemption").val();  
+         var demographicA=$("#demographicA").val();  
+         var demographicB=$("#demographicB").val();  
+         var demographicC=$("#demographicC").val();  
+         var demographicD=$("#demographicD").val(); 
+         var demographicF=$("#demographicF").val(); 
+         var demographicG=$("#demographicG").val(); 
+         var principalInvestigator=$("#principalInvestigator").val(); 
+         var principalInvestigator=$("#principalInvestigator").val(); 
+         var principalInvestigator=$("#principalInvestigator").val(); 
+         var principalInvestigator=$("#principalInvestigator").val(); 
+         var Risk=$("#Risk").val(); 
+         var RiskYes=$("#RiskYes").val(); 
+         var ConfidentialityA=$("#ConfidentialityA").val(); 
+         var ConfidentialityB=$("#ConfidentialityB").val(); 
+         var ConfidentialityCi=$("#ConfidentialityCi").val(); 
+         var ConfidentialityCii=$("#ConfidentialityCii").val(); 
+         var ConfidentialityCiii=$("#onfidentialityCiii").val(); 
+         var BenefitsA=$("#BenefitsA").val(); 
+         var BenefitsB=$("#BenefitsB").val(); 
+         var exclusion=$("#exclusion").val(); 
+         var extension=$("#extension").val(); 
+         
+            var ajaxPageUrl="submitFormImplement.php?cmd=1&ProjectTitle="+ProjectTitle+
+            "&principalInvestigator="+principalInvestigator
+         "&principalInvestigatorDept="+principalInvestigatorDept
+         "&principalInvestigatorPhone="+principalInvestigatorPhone
+         "&principalInvestigatorEmail="+principalInvestigatorEmail
+         "&principalInvestigatorFax="+principalInvestigatorFax
+         "&externalGrant="+externalGrant
+         "&hsrcExemptionhsrcExemption="+hsrcExemption
+         "&demographicA="+demographicA
+         "&demographicB="+demographicB
+         "&demographicC="+demographicC
+         "&demographicD="+demographicD
+         "&demographicF="+demographicF
+         "&demographicG="+demographicG
+         "&principalInvestigator="+principalInvestigator
+         "&principalInvestigator="+principalInvestigator
+         "&principalInvestigator="+principalInvestigator
+         "&principalInvestigator="+principalInvestigator
+         "&Risk="+Risk
+         "&RiskYes="+RiskYes
+         "&ConfidentialityA="+ConfidentialityA
+         "&ConfidentialityB="+ConfidentialityB
+         "&ConfidentialityCi="+ConfidentialityCi
+         "&ConfidentialityCii="+ConfidentialityCii
+         "&ConfidentialityCiii="+ConfidentialityCiii
+         "&BenefitsA="+BenefitsA
+         "&BenefitsB="+BenefitsB
+         "&exclusion="+exclusion
+         "&extension="+extension
+            ;  
+         
+         
             $.ajax(ajaxPageUrl,
          {async:true,complete:submitFormComplete}  
             );
@@ -50,7 +99,6 @@
       </script>
    </head>
    <body>
-
       <div id="container">
          <div id="header">
             <h1><b>ASHESI UNIVERSITY COLLEGE IRB APPLICATION PORTAL</b> </h1>
@@ -318,7 +366,6 @@
             Copyright &copy; 2016 ASHESI UNIVERSITY COLLEGE IRB BOARD__________________________________________  
             <h3>
          </b>
-             <!--   <div class="status" id="divStatus">Ready</div>  -->
       </footer>
    </body>
 </html>

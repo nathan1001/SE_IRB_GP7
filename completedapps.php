@@ -13,7 +13,7 @@
     *@return boolean returns true if successful or false 
     */
    function submitForm($ProjectTitle,
-$principalInvestigator,
+   $principalInvestigator,
          $coprincipalInvestigators,
          $principalInvestigatorDept,
          $principalInvestigatorPhone,
@@ -40,7 +40,7 @@ $principalInvestigator,
          $extension ){
      $strQuery="insert into completed set
        ProjectTitle='$ProjectTitle',
-
+   
        principalInvestigator='$principalInvestigator',
       coprincipalInvestigators='$coprincipalInvestigators',
     principalInvestigatorDept='$principalInvestigatorDept',
@@ -66,7 +66,7 @@ $principalInvestigator,
       BenefitsB='$BenefitsB',
       exclusion='$exclusion',
       extension='$extension'
-
+   
        ";
        return $this->query($strQuery);    
    }
