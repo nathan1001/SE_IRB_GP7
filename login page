@@ -1,0 +1,118 @@
+<?php
+
+?>
+				<html>
+						<head>
+							<title>IRB Login</title>
+							<link rel="stylesheet" type="text/css" href="style.css"/><!-- External css file extension-->
+							<script type="text/javascript" src="js/jquery-1.12.1.js"></script>
+				<script type="text/javascript">
+
+					function loginUserComplete(xhr,status){
+						if(status!="success"){
+							alert("Invalid Username/Password");
+							return;
+						}
+
+						var obj=$.parseJSON(xhr.responseText);
+
+						if(obj.result==1){
+						//opens welcome page when the login was successful
+						if (obj.applicantType=="Student"){
+							//different page for school
+							alert(obj.message);
+							//	header("Location:WelcomePage.php");
+						window.open("WelcomePage.php","_self");
+						}
+						else if(obj.applicantType=="Faculty"){
+							//different page for faculty
+							alert(obj.message);
+							window.open("reviewerHP.php","_self");
+						}
+						}
+						else{
+						//window.open(index.php);
+						alert(obj.message);
+						}
+
+
+					}
+
+					//function called in the usersajax ,with the settings etc.
+					function loginUser(usnID,pwordID){
+
+						var ajaxPageUrl="usersajax.php?cmd=3&usnID="+usnID.value+"&pwordID="+pwordID.value;
+						$.ajax(ajaxPageUrl,
+							{
+								async:true,
+								complete:loginUserComplete
+							}
+						);
+					}
+					var currentObject=null;
+
+
+				</script>
+						</head>
+						<body>
+							<div id="header1">
+								 <img src="image2" alt="Ashesi Logo" align="left" style="width:10%;height:100%;">
+								 <h1><b>ASHESI UNIVERSITY COLLEGE IRB APPLICATION PORTAL</b> </h1>
+							<div id="content2">
+								<table border="1" align="middle">
+								<tr>
+									<td colspan="3" >
+									<center><img src="ashesi.jpg" alt="Ashesi Logo" align="middle"></center>
+
+									</td>
+								</tr>
+								<tr>
+									<td id="links">
+									<div class="menuitem"> <a href="http://www.ashesi.edu.gh/">HOME</a></div>
+									<div class="menuitem"><a href="http://sis.ashesi.edu.gh/focus/">FOCUS</a></div>
+									<div class="menuitem"><a href="http://sis.ashesi.edu.gh/courseware/">COURSEWARE</a</div>
+
+								</td>
+
+								<td id= "content5">
+
+
+									<div> USERNAME
+									<input type="text" name="username" value="" id='usnID'/>
+									</div>
+
+
+									<div> PASSWORD
+									<input type="password" name="password" value="" id='pwordID'/>
+									</div>
+
+									<div>
+									<button onclick='loginUser(usnID,pwordID)'>Login </button>
+
+
+									</div>
+
+								</td>
+
+									<td id="links">
+									<div class="menuitem">Contact us</div>
+									<div class="menuitem">Feedback</div>
+									<div class="menuitem">About . . .</div>
+
+								</td>
+
+								</tr>
+
+
+
+								</table>
+</div>
+								<footer id="footer">
+					 									 <br>2016 ASHESI UNIVERSITY COLLEGE IRB BOARD</br>
+					 		 </footer>
+
+
+
+						</body>
+					</html>
+php?>
