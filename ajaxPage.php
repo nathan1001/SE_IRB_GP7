@@ -3,7 +3,7 @@
       <title>IRB Application</title>
       <link rel="stylesheet" type="text/css" href="style.css"/>
       <script type="text/javascript" src="js/jquery-1.12.1.js"></script>
-      <script type="text/javascript">
+        <script type="text/javascript">
          /**
          *callback function for submitForm ajax call
          */
@@ -23,7 +23,67 @@
          function submitForm(){
                     
          var ProjectTitle=$("#ProjectTitle").val();  
-            var ajaxPageUrl="submitFormImplement.php?cmd=1&ProjectTitle="+ProjectTitle; 
+     var principalInvestigator=$("#principalInvestigator").val();  
+         var principalInvestigatorDept=$("#principalInvestigatorDept").val();  
+        var principalInvestigatorPhone=$("#principalInvestigatorPhone").val();  
+         var principalInvestigatorEmail=$("#principalInvestigatorEmail").val();  
+         var principalInvestigatorFax=$("#principalInvestigatorFax").val();  
+         var externalGrant=$("#xternalGrant").val();  
+       var hsrcExemptionhsrcExemption=$("#hsrcExemption").val();  
+         var demographicA=$("#demographicA").val();  
+         var demographicB=$("#demographicB").val();  
+        var demographicC=$("#demographicC").val();  
+        var demographicD=$("#demographicD").val(); 
+       var demographicF=$("#demographicF").val(); 
+        var demographicG=$("#demographicG").val(); 
+        var principalInvestigator=$("#principalInvestigator").val(); 
+        var principalInvestigator=$("#principalInvestigator").val(); 
+       var principalInvestigator=$("#principalInvestigator").val(); 
+        var principalInvestigator=$("#principalInvestigator").val(); 
+        var Risk=$("#Risk").val(); 
+         var RiskYes=$("#RiskYes").val(); 
+        var ConfidentialityA=$("#ConfidentialityA").val(); 
+      var ConfidentialityB=$("#ConfidentialityB").val(); 
+       var ConfidentialityCi=$("#ConfidentialityCi").val(); 
+       var ConfidentialityCii=$("#ConfidentialityCii").val(); 
+       var ConfidentialityCiii=$("#onfidentialityCiii").val(); 
+        var BenefitsA=$("#BenefitsA").val(); 
+         var BenefitsB=$("#BenefitsB").val(); 
+       var exclusion=$("#exclusion").val(); 
+        var extension=$("#extension").val(); 
+        
+            var ajaxPageUrl="submitFormImplement.php?cmd=1&ProjectTitle="+ProjectTitle+
+            "&principalInvestigator="+principalInvestigator
+         "&principalInvestigatorDept="+principalInvestigatorDept
+         "&principalInvestigatorPhone="+principalInvestigatorPhone
+         "&principalInvestigatorEmail="+principalInvestigatorEmail
+         "&principalInvestigatorFax="+principalInvestigatorFax
+         "&externalGrant="+externalGrant
+         "&hsrcExemptionhsrcExemption="+hsrcExemption
+         "&demographicA="+demographicA
+         "&demographicB="+demographicB
+         "&demographicC="+demographicC
+         "&demographicD="+demographicD
+         "&demographicF="+demographicF
+         "&demographicG="+demographicG
+         "&principalInvestigator="+principalInvestigator
+         "&principalInvestigator="+principalInvestigator
+         "&principalInvestigator="+principalInvestigator
+         "&principalInvestigator="+principalInvestigator
+         "&Risk="+Risk
+         "&RiskYes="+RiskYes
+         "&ConfidentialityA="+ConfidentialityA
+         "&ConfidentialityB="+ConfidentialityB
+         "&ConfidentialityCi="+ConfidentialityCi
+         "&ConfidentialityCii="+ConfidentialityCii
+         "&ConfidentialityCiii="+ConfidentialityCiii
+         "&BenefitsA="+BenefitsA
+         "&BenefitsB="+BenefitsB
+         "&exclusion="+exclusion
+         "&extension="+extension
+            ;  
+         
+         
             $.ajax(ajaxPageUrl,
          {async:true,complete:submitFormComplete}  
             );
