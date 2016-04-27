@@ -31,16 +31,65 @@
       }
         include_once("completedapps.php");
     include_once("submitFunction.php");
-    echo"dey job";
+   
    
    //create object of completedapps class
    $obj= new completedapps();
    
    $ProjectTitle=$_REQUEST['ProjectTitle'];
-   
+   $principalInvestigator=$_REQUEST['principalInvestigator'];
+         $coprincipalInvestigators=$_REQUEST['coprincipalInvestigators'];
+         $principalInvestigatorDept=$_REQUEST['principalInvestigatorDept'];
+         $principalInvestigatorPhone=$_REQUEST['principalInvestigatorPhone'];
+         $principalInvestigatorEmail=$_REQUEST['principalInvestigatorEmail'];
+         $principalInvestigatorFax=$_REQUEST['principalInvestigatorFax'];
+         $externalGrant=$_REQUEST['externalGrant'];
+         $hsrcExemption=$_REQUEST['hsrcExemption'];
+         $demographicA=$_REQUEST['demographicA'];
+         $demographicB=$_REQUEST['demographicB'];
+         $demographicC=$_REQUEST['demographicC'];
+         $demographicD=$_REQUEST['demographicD'];
+         $demographicF=$_REQUEST['demographicF'];
+         $demographicG=$_REQUEST['demographicG'];
+         $Risk=$_REQUEST['Risk'];
+         $RiskYes=$_REQUEST['RiskYes'];
+         $ConfidentialityA=$_REQUEST['ConfidentialityA'];
+         $ConfidentialityB=$_REQUEST['ConfidentialityB'];
+         $ConfidentialityCi=$_REQUEST['ConfidentialityCi'];
+         $ConfidentialityCii=$_REQUEST['ConfidentialityCii'];
+         $ConfidentialityCiii=$_REQUEST['ConfidentialityCiii'];
+         $BenefitsA=$_REQUEST['BenefitsA'];
+         $BenefitsB=$_REQUEST['BenefitsB'];
+         $exclusion=$_REQUEST['exclusion'];
+         $extension=$_REQUEST['extension'];
       
       //submits the form
-      if($obj->submitForm($ProjectTitle)){
+      if($obj->submitForm($ProjectTitle,
+$principalInvestigator,
+         $coprincipalInvestigators,
+         $principalInvestigatorDept,
+         $principalInvestigatorPhone,
+         $principalInvestigatorEmail,
+         $principalInvestigatorFax,
+         $externalGrant,
+         $hsrcExemption,
+         $demographicA,
+         $demographicB,
+         $demographicC,
+         $demographicD,
+         $demographicF,
+         $demographicG,
+         $Risk,
+         $RiskYes,
+         $ConfidentialityA,
+         $ConfidentialityB,
+         $ConfidentialityCi,
+         $ConfidentialityCii,
+         $ConfidentialityCiii,
+         $BenefitsA,
+         $BenefitsB,
+         $exclusion,
+         $extension )){
          echo "Form submitted success";
       }else{
          echo "form not submitted o.";

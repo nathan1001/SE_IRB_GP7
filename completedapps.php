@@ -12,9 +12,61 @@
     *@param string ProjectTitle login name
     *@return boolean returns true if successful or false 
     */
-   function submitForm($ProjectTitle){
+   function submitForm($ProjectTitle,
+$principalInvestigator,
+         $coprincipalInvestigators,
+         $principalInvestigatorDept,
+         $principalInvestigatorPhone,
+         $principalInvestigatorEmail,
+         $principalInvestigatorFax,
+         $externalGrant,
+         $hsrcExemption,
+         $demographicA,
+         $demographicB,
+         $demographicC,
+         $demographicD,
+         $demographicF,
+         $demographicG,
+         $Risk,
+         $RiskYes,
+         $ConfidentialityA,
+         $ConfidentialityB,
+         $ConfidentialityCi,
+         $ConfidentialityCii,
+         $ConfidentialityCiii,
+         $BenefitsA,
+         $BenefitsB,
+         $exclusion,
+         $extension ){
      $strQuery="insert into completed set
-       ProjectTitle='$ProjectTitle'
+       ProjectTitle='$ProjectTitle',
+
+       principalInvestigator='$principalInvestigator',
+      coprincipalInvestigators='$coprincipalInvestigators',
+    principalInvestigatorDept='$principalInvestigatorDept',
+     principalInvestigatorPhone='$principalInvestigatorPhone',
+     principalInvestigatorEmail='$principalInvestigatorEmail',
+      principalInvestigatorFax='$principalInvestigatorFax',
+      externalGrant='$externalGrant',
+      hsrcExemption='$hsrcExemption',
+      demographicA='$demographicA',
+      demographicB='$demographicB',
+      demographicC='$demographicC',
+      demographicD='$demographicD',
+      demographicF='$demographicF',
+      demographicG='$demographicG',
+      Risk='$Risk',
+      RiskYes='$RiskYes',
+      ConfidentialityA='$ConfidentialityA',
+      ConfidentialityB='$ConfidentialityB',
+      ConfidentialityCi='$ConfidentialityCi',
+      ConfidentialityCii='$ConfidentialityCii',
+      ConfidentialityCiii='$ConfidentialityCiii',
+      BenefitsA='$BenefitsA',
+      BenefitsB='$BenefitsB',
+      exclusion='$exclusion',
+      extension='$extension'
+
        ";
        return $this->query($strQuery);    
    }
